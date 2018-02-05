@@ -1,0 +1,140 @@
+footer {
+    position: absolute;
+    bottom: 0;
+}
+section {
+    position: absolute;
+    top:0.9rem;
+    bottom: 0.96rem;
+}
+.alarmTop{
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.9rem;
+	height:1.24rem;
+	background:#fff;
+}
+.alarmTop dl{
+	padding-left: 0.3rem;
+}
+.alarmTu{
+	width: 1.1rem;
+	float: left;
+	height: 1.24rem;
+}
+.alarmTu img{
+	width: 0.62rem;
+	height: 0.62rem;
+}
+
+.alarmTop dd{
+	padding-top: 0.23rem;
+	font-size: 0.28rem;
+	color: #333;
+}
+.alarmTop dd span{
+	font-size: 0.2rem;
+	color: #999;
+}
+.alarmMessBox{
+	font-size: 0.3rem;
+	padding-left: 0.3rem;
+	background: #fff;
+	margin-top: 0.2rem;
+}
+.alarmMessBox li{
+	text-align: start;
+	position: relative;
+	height:0.98rem;
+	line-height: 0.98rem;
+	border-bottom: 1px solid #bdbdbd;
+}
+.textareaBox{
+	border-bottom: 1px solid #bdbdbd;
+}
+.dealBox ul li input{
+	text-align: left;
+}
+.alarmMessBox li span,
+.textareaBox span{
+	color: #333;
+	float: left;
+	height: 0.95rem;
+	line-height: 0.95rem;
+    width: 1.4rem;
+}
+.alarmMessBox li input{
+	float: left;
+	width: 5.4rem;
+	height: 0.95rem;
+	text-align: right;
+}
+.troubMess{
+ 	margin-top: 0.28rem;
+	width: 5.4rem;
+	height: 1.98rem;
+}
+.dealBtn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 0.98rem;
+    text-align: center;
+    color: #fff;	
+    background: #e60012;
+}
+/*个人 中心start*/
+.alarmMessBox .userBox .userLi{
+	height: 1.38rem;
+	line-height: 1.38rem;
+}
+.userPhoto{
+	float:right;
+	width:1.14rem;
+	height:1.38rem
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+.userPhoto img{
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+.alarmMessBox .userLi span{
+	height: 100%;
+	line-height: 1.38rem;
+}
+.alarmMessBox .userLi input{
+	text-align: center;
+	font-size: 0.28rem;
+	color: #999;
+}
+.userBox .next{
+	position: absolute;
+    top: 0;
+}
+.alarmMessBox .ui-icon-next{
+    line-height: 1rem;
+}
+.alarmMessBox .userBox input{
+	width: 5rem;
+	color: #999;
+}
+.sendMess{
+	margin: 0.2rem 0;
+	border-bottom: 1px solid #bdbdbd;
+}
+.whiteBtn{
+	width: 100%;
+	height: 0.98rem;
+	line-height: 0.98rem;
+	text-align: center;
+	background: #fff;
+	color: #333;
+	font-size: 0.34rem;
+}
+/*个人 中心end*/

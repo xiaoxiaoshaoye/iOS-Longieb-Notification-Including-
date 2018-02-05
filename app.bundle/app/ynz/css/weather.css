@@ -1,0 +1,48 @@
+
+.weather{
+	background: #fff;
+	margin: 0.24rem 0;
+	border-bottom: 1px solid #F2F2F2;
+}
+.weather1{
+	height:3.72rem;
+	background: #fff;
+}
+.weathThird{
+	width: 24.56%;
+	float: left;
+	height: 1.96rem;
+	border-right: 1px solid #bdbdbd;
+	text-align: center;
+	color: #999;
+	margin-top: 0.33rem;
+}
+.weathThird dt img{
+	width:0.68rem;
+	height:0.68rem;
+	margin-bottom: 0.03rem;
+}
+.weathDes{
+	margin-top: 0.028rem;
+	font-size: 0.29rem;
+}
+.weatherDt{
+	line-height: 1.2;
+	color: #333;
+}
+.weatherDt span{
+	font-size: 0.28rem;
+}
+.weather2,
+.weather3 {	
+	height:2.92rem;
+	overflow: hidden;
+}
+.weather3 .weathThird{
+	width: 24.56%;
+}
+.weather3 .weathThird{
+	width: 32.59%;
+	margin-top: 0.43rem;
+}
+

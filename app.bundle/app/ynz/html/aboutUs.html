@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>		
+		<title>关于我们页面</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../css/notice.css"/>-->
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+		<style>
+			.logo{
+				width: 100%;
+				text-align: center;
+				padding: 1.6rem 0 1.2rem;
+				margin: 0;
+			}
+			.logo img{
+				width: 3rem;
+			    height: auto;
+			    visibility: visible;
+			    margin: 0;
+			}
+			.alarmMessBox{
+				font-size: 0.3rem;
+				padding-left: 0.3rem;
+				background: #fff;
+				margin-top: 0.2rem;
+				border-bottom: 1px solid #bdbdbd;	
+			}
+			.alarmMessBox li{
+				text-align: start;
+				position: relative;
+				height:0.98rem;
+				line-height: 0.98rem;
+				border-bottom: 1px solid #bdbdbd;
+			}
+			.version{
+				float: right;
+    			padding-right: 0.5rem;
+			}
+		</style>
+	</head>
+	<body ontouchstart="">
+		<header>
+			<ul class="headerBox">
+				<a href="userMess.html"><li class="absolLeft"><i class="ui-icon-return"></i></li></a>
+				<li class="textCenter">关于APP</li>
+			</ul>	
+		</header>
+		<h1 class="logo"><img src="../img/login_logo.png"/></h1>
+		<div class="alarmMessBox" style="margin-top:0.2rem;">
+			<ul class="userBox ui-border-b">
+				<li class="ui-border-b">
+					<span>当前版本</span>
+					<b class="version">V <span id="version">11.0.2</span></b>
+				</li>
+				
+					<li onclick="checkVersion();" class="noborder">版本检查</li>
+				
+			</ul>
+		</div>
+		<div class="ui-dialog show" id="processpanel" style="display: none;">
+			<div class="ui-dialog-cnt" style="width: 208px;">
+				<div class="ui-dialog-bd">
+					<div style="text-align: center;">
+						<div>下载进度：<span id="processnum">0</span>%</div>
+					</div>
+				</div>
+				<div class="ui-dialog-ft ui-btn-group">
+					<button type="button" data-role="button" class="select" onclick="hideSure();" id="dialogButton0">取消</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/config.js"></script>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../../dist/js/frozen.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/user/aboutUs.js"></script>
+</html>

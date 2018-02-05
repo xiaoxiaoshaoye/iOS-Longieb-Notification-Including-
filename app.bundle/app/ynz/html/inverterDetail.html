@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>设备监控列表-逆变器详情</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--common style start-->
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+		<link rel="stylesheet" href="../../lib/mescroll/mescroll.css" />
+		<link rel="stylesheet" type="text/css" href="../css/measureDetail.css"/>
+		
+		
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+	</head>
+	<body>
+		<div id="seachCon" style="display: none;height: 100%;">
+			<header class="headerCls">
+				<p class="absolLeft returnButton" onclick="reloadthispage();"><i class="ui-icon-return"></i></p>
+				<div class="searchBar">
+					<!--<form method="post">	-->					
+						<i class="ui-icon-search"></i>
+						<input type="text" class="searchTxt" name="" id="inverterCondition" value="" placeholder="输入设备编号"/>
+						<a onclick="clearInp();" class="ui-icon-close"></a>
+					<!--</form>-->
+				</div>
+				<span class="cancleTxt"><a onclick="seacherBtn();">搜索</a></span>
+			</header>
+			<section>
+				<div class="searchCont">
+					<div class="searchBox">
+						<span class="searchTitle">在这里可以搜索</span>
+						<p class="borderTop"></p>	
+						<ul class="historyBox" id="historyBox">
+						</ul>
+					</div>
+				</div>			
+			</section>
+		</div>
+		<div id="mainCon" class="main mainCont" style="display: block;height: 100%;">
+			<!--header start-->
+			<header class="noSubtxt">
+				<!--<div class="detailHead"><span class="returnTxt">电站列表</span><p class="textCenter">设备监控</p></div>-->
+				<ul class="headerBox">
+					<a href="equipView.html"><li class="absolLeft"><i class="ui-icon-return"></i></li></a>
+					<li class="textCenter">设备监控</li>
+				</ul>	
+				<nav>
+					<ul class="headNav">
+						<li id="all" class="activeLi" onclick="loadList(0);"><a href="###">全部</a><i class="redBorder"></i></li>
+						<li id="nomal" onclick="loadList(1);"><a href="###">正常</a><i></i></li>
+						<li id="stop" onclick="loadList(2);"><a href="###">待机</a><i></i></li>
+						<li id="fault" onclick="loadList(3);"><a href="###">故障</a><i></i></li>
+					</ul>
+				</nav>
+			</header><!--header end-->
+			<section class="contDiv">
+				<!--<div class="search">
+					<a href="searchInverter.html"><b class="shousuo"></b><span id="seachName">搜索</span></a>
+					
+				</div>-->
+				<div class="search" style="text-align:left;" onclick="seachDiv();">
+					<!--<form method="post">	-->					
+						<i class="ui-icon-search"></i>
+						<span id="seachName">搜索</span>
+					<!--</form>-->
+				</div>
+				<!--滑动区域  设备详情start-->
+				<div class="wrapColor mescroll" id="inverterList">
+					
+				</div>
+				<!--滑动区域 设备详情end-->
+			</section>	
+		</div>
+	</body>
+	<script src="../js/config.js"></script>
+	<script src="../js/cache.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/common/utils.js"></script>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../js/static/frozen.js"></script>
+	<script src="../js/powerStation/inverterDetail.js"></script>
+</html>

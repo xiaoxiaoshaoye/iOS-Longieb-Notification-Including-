@@ -1,0 +1,180 @@
+.mescroll{
+	position: fixed;
+    top: 1.92rem;
+    bottom: 0;
+    height: auto;	
+} 
+.headerFlex{
+	width: 100%;
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+.headerFlex li{	 
+    flex-grow: 1;
+	-ms-flex-align: center;
+	-webkit-flex-align: center;
+	flex-align: center;
+	justify-content: space-between;
+	-webkit-justify-content:space-between;
+} 
+.plantList{
+	border-bottom:1px solid #eaeaea;
+	background: #fff;
+	padding: 0.5rem 0.3rem;
+	overflow: hidden;
+	color: #666;
+	margin-bottom: 0.23rem;
+}
+.plantImg,
+.plantImg img{
+	width: 2.44rem;
+	height: 2rem;
+	float: left;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	float: left;
+}
+.plantMess{
+	font-size: 0.3rem;
+	float: left;
+	padding-left: 0.18rem;
+}
+.plantName{
+	font-size: 0.34rem;
+	font-weight: 900;
+	color: #263238;
+	margin: 0.11rem 0 0.23rem;
+}
+.address span{
+	float: left;
+}
+.address{
+	margin-top: 0.28rem;	
+}
+.address i{
+	float:left;
+	width: 3.22rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+}
+/*测量箱*/
+.ui-icon-next{
+	line-height: 0.9rem;
+}
+.axieClx_box{
+	/*height: 100%;*/
+	height: auto;
+	margin-top: 0.6rem;
+}
+.clx_equipList{
+	height: 1.27rem;
+    padding: 0.43rem 0 0 0.3rem;
+    font-size: 0.34rem;
+    position: relative;
+}
+.absoNext{
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+.centerBox{
+	float:left;
+}
+.centerBox li{
+	float:left;
+	height: 0.9rem;
+	padding: 0 0.35rem;
+	text-align: center;
+}
+.centerBox li p{
+	font-size: 0.28rem;
+}
+/*单双轴start*/
+.axie_equipList{
+	height: 2.06rem;
+	position: relative;
+	padding-top: 0;
+	margin-top:0.24rem;
+	color: #666;
+}
+.axieBox{
+	font-size: 0.3rem;
+	height: 100%;
+}
+.axieTitle{
+	float: right;
+	margin-left: 0.86rem;
+}
+.axieTitle{
+	width: 3.2rem;
+    height: 0.6rem;
+    line-height: 0.76rem;
+    float: right;
+    border-bottom: 1px solid #bdbdbd;
+    margin-right: 0.32rem;
+}
+.axieTitle span{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.numReight{
+	height: 1rem;
+}
+.numCont{
+	position: relative;
+}
+.numCont p{
+	height: 0.65rem;
+	line-height: 0.65rem;
+}
+.numCont b{
+	display:inline-block;
+	width: 1.7rem;
+	text-align: center;
+}
+.numCont span{
+	display: inline-block;
+	margin-left: 0.1rem;
+	/*margin-right: 0.25rem;*/
+}
+.clx_equipList .clx_name{
+	margin-top: 0;
+}
+
+.borderDiv{
+	height: 1rem;
+    width: 1px;
+    position: absolute;
+    top: 0.12rem;
+    left: 65%;
+    background: #bdbdbd;
+}
+.state{
+	margin-top: 0;
+}
+.angleImg{
+	display: inline-block;
+	width: 0.44rem;
+	height: 0.44rem;
+	background: url(backImg/angle.png) no-repeat center;
+	background-size: 100% 100%;
+	margin-top: 0.1rem;
+    float: left;
+}
+.direImg{
+	display: inline-block;
+	width: 0.44rem;
+	height: 0.44rem;
+	background: url(backImg/dire.png) no-repeat center;
+	background-size: 100% 100%;
+	margin-top: 0.1rem;
+    float: left;
+}
+/*单双轴end*/

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>个人中心列表</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/notice.css"/>
+		<link rel="stylesheet" href="../css/intial.css" />
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+	</head>
+	<body>
+		<!--header start-->
+		<header>
+			<div class="detailHead">
+				<a href="plantList.html"><span class="returnTxt" style="color: #fff;">电站列表</span></a>
+				<p class="textCenter">个人中心</p>
+			</div>	
+		</header><!--header end-->
+		<!--个人中心start-->
+		<section class="wrapColor">
+			<form action="" method="post">
+				<div class="alarmMessBox" style="margin-top:0.2rem;">
+					<ul class="userBox">
+						<li class="userLi">
+							<span>头像</span>
+							<!--<input id="addImg" type="file" name="file" accept="image/*" onchange="uploadFile(event);" style="display: none;" /> -->
+							<!--<input type="file" accept="image/jpg,image/png,image/jpeg" capture="camera" style="display: none;"/>-->
+							<div class="userPhoto" id="changeAvatar" onclick="clickFile();"><i class="centerImg"></i><img id="headshot" src="../img/userPhoto.png" style="display: inline-block;width: 50px;height: 60px;"/></div>
+							<!--<div class="userPhoto" id="changeAvatar"><i class="centerImg"></i><img id="headshot" src="../img/userPhoto.png" style="display: inline-block;"/></div>-->
+						</li>
+						<li>
+							<span>联系方式</span>
+							<input readonly  id="telephone" type="tel"/>
+						</li>
+						<li>
+							<span>账号</span>
+							<input readonly  id="username" type="text"/>
+						</li>
+						<li>
+							<span>邮箱</span>
+							<input readonly  id="email" type="email"/>
+						</li>
+						<a href="setName.html">
+							<li>
+								<span>真实姓名</span>
+								<input readonly id="realname" type="text"/>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+						<li>
+							<span>公司</span>
+							<input readonly  id="company" type="text"/>
+						</li>
+						<li>
+							<span>角色</span>
+							<input readonly  id="role" type="text"/>
+						</li>
+					</ul>
+				</div>
+				<div class="alarmMessBox sendMess">
+					<ul class="userBox">
+						<a href="setNotic.html">
+							<li>
+								<span>消息推送</span>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+						<a href="aboutUs.html">
+							<li class="noborder">
+								<span>关于APP</span>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+					</ul>
+				</div>
+				<button class="whiteBtn" onclick="logOut();" type="button">退出登录</button>
+			</form>
+			<form id='fileform' target='framFile' method='post' action='http://test.yunengzhe.com:846/tools/file/upload' enctype='multipart/form-data' hidden="hidden">
+			</form>
+			
+		</section><!--个人中心end-->
+		<footer>
+			<!--*****************-->
+			<!--图片裁剪-->
+			<div class="clipbg displaynone">
+				<div id="clipArea"></div>
+				<div class="loading displaynone">正在载入图片...</div>
+				<div class="wrapper"></div>
+				<div class="footer" id="photoFoot">
+					<dl>
+						<dd id="albumBtn">相册
+							<form id="formTest"><input type="file" id="file" accept="image/jpg,image/png,image/jpeg" ></form></dd>
+		      			<dd id="rotateBtn" style="display: none;">点击旋转</dd>
+		      			<dd id="clipBtn" style="display: none;">完成裁剪</dd>
+					</dl>
+					<div class="back">取消</div>
+				</div>
+			</div>
+			<!--*****************-->
+			<div id="foot">
+				<dl class="menu">
+					<a href="parameter.html">
+						<dt class="menuTu menu1"><img src="../img/footImg1.png" alt="电站概览"></dt>
+						<dd>电站概览</dd>
+					</a>
+				</dl>
+				<dl class="menu">
+					<a href="equipView.html">
+						<dt class="menuTu menu1"><img src="../img/footImg2.png" alt="设备监控"></dt>
+						<dd>设备监控</dd>
+					</a>
+				</dl>
+				<dl class="menu">
+					<a href="alarmMess.html">
+						<dt class="menuTu menu1"><img src="../img/footImg3.png" alt="报警信息"></dt>
+						<dd>报警信息</dd>
+					</a>
+				</dl>
+				<dl class="menu">
+					<a href="userMess.html">
+						<dt class="menuTu menu1"><img src="../img/userPhoto.png" alt="个人中心"></dt>
+						<dd class="activeMenu">个人中心</dd>
+					</a>
+				</dl>
+			</div>
+		</footer>
+	</body>
+	<script src="../js/common/jquery.min.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/common/utils.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/plugins/jquery-form.js"></script>
+	<script src="../js/user/userInfo.js"></script>
+	<script type="text/javascript" src="../js/camera.js/hammer.min.js" ></script>
+	<script type="text/javascript" src="../js/camera.js/lrz.all.bundle.js" ></script>
+	<script type="text/javascript" src="../js/camera.js/iscroll-zoom-min.js" ></script>
+	<script type="text/javascript" src="../js/camera.js/PhotoClip.js" ></script>
+	<script>
+		//点击头像切换
+		$("#changeAvatar").click(function(){
+			$(".wrapper").show();
+			$("#albumBtn").show();
+			$(".clipbg").fadeIn();
+			$("#photoFoot").show();
+			$("#rotateBtn").hide();
+			$("#clipBtn").hide();
+			$(".clipbg").removeClass("clipbgColor");
+			$(".photo-clip-mask,.photo-clip-rotation-layer").hide();
+			$(".photo-clip-rotation-layer img").attr("src","");
+			$("#foot").hide();
+		})
+		var clipArea = new  PhotoClip("#clipArea", {
+			size: [300, 300],//裁剪框大小
+			outputSize:[0,0],//打开图片大小，[0,0]表示原图大小
+			file: "#file",
+			ok: "#clipBtn",
+			loadStart: function() { //图片开始加载的回调函数。this 指向当前 PhotoClip 的实例对象，并将正在加载的 file 对象作为参数传入。（如果是使用非 file 的方式加载图片，则该参数为图片的 url）
+				$(".loading").removeClass("displaynone");
+				$(".wrapper").hide();
+				$(".clipbg").addClass("clipbgColor");
+				$(".photo-clip-mask").show();
+				$("#albumBtn").hide();
+				$("#rotateBtn").show();
+				$("#clipBtn").show();
+				$(".photo-clip-mask,.photo-clip-rotation-layer").show();
+
+			},
+			loadComplete: function() {//图片加载完成的回调函数。this 指向当前 PhotoClip 的实例对象，并将图片的 <img> 对象作为参数传入。
+				$(".loading").addClass("displaynone");
+			
+			},
+			done: function(dataURL) { //裁剪完成的回调函数。this 指向当前 PhotoClip 的实例对象，会将裁剪出的图像数据DataURL作为参数传入。			
+				console.log(dataURL);//dataURL裁剪后图片地址base64格式提交给后台处理
+				uploadImage(dataURL);
+				$(".clipbg").fadeOut();
+				$("#headshot").attr("src",dataURL);
+				$("#foot").show();
+
+			}
+		});
+		$(".back").click(function(){
+			$(".clipbg").fadeOut();
+			$("#foot").show();
+		});
+		var  test = 0;
+		$("#rotateBtn").click(function(){
+			test = (test+90)%360;
+			clipArea.rotate(test,test);
+		});
+		$("#file").on("change",function(){
+			$("#formTest")[0].reset();
+		});
+	</script>
+</html>

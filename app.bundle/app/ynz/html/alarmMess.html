@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>报警信息--未处理</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/notice.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/measureDetail.css"/>
+		<link rel="stylesheet" href="../../lib/mescroll/mescroll.css" />
+		
+		<style>
+			footer {
+			    position: absolute;
+			    bottom: 0;
+		    }
+			section {
+			    position: absolute;
+			    top: 1.75rem;
+			    bottom: 0.96rem;
+			}
+		</style>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				-webkit-touch-callout:none;
+				-webkit-tap-highlight-color:transparent;
+			}
+			body{background-color: white;}
+			ul{list-style-type: none}
+			
+			/*模拟的标题*/
+			.header{
+				z-index: 9990;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				line-height: 16px;
+				padding-top: 12px;
+				text-align: center;
+				background-color: white;
+			}
+			.header .btn-left{
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding:12px;
+			}
+			.header .btn-right{
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding:12px 8px;
+			}
+			.header .tip{
+				margin-top: 4px;
+				font-size: 12px;
+				color: gray;
+			}
+			/*菜单*/
+			.header .nav{
+				margin-top: 8px;
+				border-bottom: 1px solid #ddd;
+			}
+			.header .nav p{
+				display: inline-block;
+				width: 22%;
+				padding: 5px 0;
+			}
+			.header .nav .active{
+				border-bottom: 1px solid #FF6990;
+				color: #FF6990;
+			}
+			/*列表*/
+			.mescroll{
+				position: fixed;
+				top: 84px;
+				bottom: 0.96rem;
+				height: auto;
+			}
+			/*展示上拉加载的数据列表*/
+			.data-list li{
+				position: relative;
+				padding: 10px 8px 10px 120px;
+				border-bottom: 1px solid #eee;
+			}
+			.data-list .pd-img{
+				position: absolute;
+				left: 18px;
+				top: 18px;
+				width: 80px;
+				height: 80px;
+			}
+			.data-list .pd-name{
+				font-size: 16px;
+				line-height: 20px;
+				height: 40px;
+				overflow: hidden;
+			}
+			.data-list .pd-price{
+				margin-top: 8px;
+				color: red;
+			}
+			.data-list .pd-sold{
+				font-size: 12px;
+				margin-top: 8px;
+				color: gray;
+			}
+			/*隐藏*/
+			.hide{display: none;}
+				/*回到顶部按钮*/
+			.mescroll-totop {
+				bottom: 70px;
+			}
+			.mescroll{
+				top: 2.7rem;
+			}
+			.noticeImg{
+				width:2.48rem;
+				height:2.52rem;
+				background: url(../css/backImg/notice.png) no-repeat center;
+				background-size: 100% 100%;
+				margin: 2.33rem auto 0.47rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="seachCon" style="display:none; height: 100%;">
+			<header class="searchheader headerCls">
+				<p class="absolLeft returnButton" onclick="reloadthispage();"><i class="ui-icon-return"></i></p>
+				<div class="searchBar">
+					<!--<form method="post">	-->					
+						<i class="ui-icon-search"></i>
+						<input type="text" class="searchTxt" name="" id="alarmCondition" value="" placeholder="输入设备编号或报警级别"/>
+						<a onclick="clearInp();" class="ui-icon-close"></a>
+					<!--</form>-->
+				</div>
+				<span class="cancleTxt"><a onclick="seacherBtn();">搜索</a></span>
+			</header>
+			<section>
+				<div class="searchCont">
+					<div class="searchBox">
+						<span class="searchTitle">在这里可以搜索</span>
+						<p class="borderTop"></p>	
+						<ul class="historyBox" id="historyBox">
+						</ul>
+					</div>
+				</div>			
+			</section>
+		</div>
+		<div id="mainCon" style="display: block;height: 100%;">
+			<!--header start-->
+			<header class="mainheader">
+				<div class="detailHead"><a href="plantList.html" style="color: #fff"><span class="returnTxt">电站列表</span></a><p class="textCenter">报警信息</p></div>
+				<nav>
+					<ul class="headNav">
+						<li id="btn1" class="activeLi"><a href="###">未处理</a><i class="redBorder"></i></li>
+						<li id="btn2"><a href="###">已处理</a><i></i></li>
+					</ul>
+				</nav>
+			</header><!--header end-->
+			<section>
+				<div class="search" style="text-align:left;" onclick="seachDiv();">
+					<!--<form method="post">	-->					
+						<i class="ui-icon-search"></i>
+						<span id="seachName">搜索</span>
+					<!--</form>-->
+				</div>
+				<!--滑动区域start-->
+				<div id="mescroll0" class="mescroll wrapColor">
+					<div id="alarmList0" >
+				
+					</div>
+				</div>
+				<div id="mescroll1"  class="mescroll hide">
+					<div id="alarmList1" >
+					</div>
+				</div>
+			</section>
+			<footer>
+			<dl class="menu">
+				<a href="plantList.html">
+					<dt class="menuTu menu1"><img src="../img/footImg1.png" alt="电站概览"></dt>
+					<dd>电站概览</dd>
+				</a>
+			</dl>
+			<dl class="menu">
+				<a href="equipView.html">
+					<dt class="menuTu menu1"><img src="../img/footImg2.png" alt="设备监控"></dt>
+					<dd>设备监控</dd>
+				</a>
+			</dl>
+			<dl class="menu">
+				<a href="alarmMess.html">
+					<dt class="menuTu menu1"><img src="../img/footSelect3.png" alt="报警信息"></dt>
+					<dd class="activeMenu">报警信息</dd>
+				</a>
+			</dl>
+			<dl class="menu">
+				<a href="userMess.html">
+					<dt class="menuTu menu1"><img src="../img/footImg4.png" alt="个人中心"></dt>
+					<dd>个人中心</dd>
+				</a>
+			</dl>
+		</footer>
+		</div>
+		<div id="detailDiv" style="display: none;height: 100%;">
+			<header>
+				<ul class="headerBox">
+					<li onclick="detailBackMain();" class="absolLeft"><i class="ui-icon-return"></i></li>
+					<li class="textCenter">报警详情</li>
+				</ul>
+				<div class="alarmTop">
+					<dl>
+						<dt class="alarmTu"><i class="centerImg"></i><img src="../img/deal.png" alt="已处理"></dt>
+						<dd id="alarmGrade">一级报警</br><span>完成</span></dd>
+					</dl>
+				</div>
+			</header><!--header end-->
+			<!--报警详情start-->
+			<section class="noFoot wrapColor head9Section">
+				<form action="">
+					<div class="alarmMessBox borderB">
+						<ul>
+							<li>
+								<span>电站名称</span>
+								<input id="stationName" type="text" />
+							</li>
+							<li>
+								<span>发生时间</span>
+								<input id="createTime" type="text" />
+							</li>
+							<li>
+								<span>故障等级</span>
+								<input id="alarmGradeIII" type="text" />
+							</li>
+							<li>
+								<span>设备类型</span>
+								<input id="equipType" type="text" />
+							</li>
+							<li>
+								<span>设备编号</span>
+								<input id="equipNum" type="text" />
+							</li>
+							<li>
+								<span>测点类型</span>
+								<input id="pointType" type="text" />
+							</li>
+						</ul>
+						<div class="textareaBox noborder">
+							<span>故障信息</span>
+							<textarea id="alarmMessage" class="troubMess" cols="8"></textarea>
+						</div>
+					</div>
+					<div class="alarmMessBox borderB"  style="margin-top:0.2rem;">
+						<div class="textareaBox borderB">
+							<span>处理办法</span>
+							<textarea id="alarmOpreate" class="troubMess" cols="8"></textarea>
+						</div>
+						<ul>
+							<li>
+								<span>处理人</span>
+								<input id="handler" type="text" />
+							</li>
+							<li>
+								<span>备注信息</span>
+								<input id="remarkMesage" type="text" />
+							</li>
+							<li class="noborder">
+								<span>责任单位</span>
+								<input id="orderCompany" type="text" />
+							</li>
+						</ul>
+					</div>
+				</form>
+			</section>
+		</div>
+		<div id="conformDetail" style="display: none;height: 100%;">
+			<header>
+				<ul class="headerBox">
+					<li onclick="conformDetailBackMain();" class="absolLeft"><i class="ui-icon-return"></i></li>
+					<li class="textCenter">报警详情</li>
+				</ul>
+				<div class="alarmTop">
+					<dl>
+						<dt class="alarmTu"><i class="centerImg"></i><img src="../img/alarm1.png" alt="已处理"></dt>
+						<dd id="alarmGradecon">一级报警</br><span>未处理</span></dd>
+					</dl>
+				</div>
+			</header><!--header end-->
+			<!--报警详情start-->
+			<section class="noFoot wrapColor head9Section">
+				<form action="">
+					<div class="alarmMessBox borderB">
+						<ul>
+							<li>
+								<span>电站名称</span>
+								<input id="stationNamecon" type="text" />
+							</li>
+							<li>
+								<span>发生时间</span>
+								<input id="createTimecon" type="text" />
+							</li>
+							<li>
+								<span>故障等级</span>
+								<input id="alarmGradeIIIcon" type="text" />
+							</li>
+							<li>
+								<span>设备类型</span>
+								<input id="equipTypecon" type="text" />
+							</li>
+							<li>
+								<span>设备编号</span>
+								<input id="equipNumcon" type="text" />
+							</li>
+							<li>
+								<span>测点类型</span>
+								<input id="pointTypecon" type="text" />
+							</li>
+						</ul>
+						<div class="textareaBox noborder">
+							<span>故障信息</span>
+							<textarea id="alarmMessagecon" class="troubMess" cols="8"></textarea>
+						</div>
+					</div>
+				</form>
+			</section>
+			<footer>
+				<button type="button" onclick="toconform();" class="dealBtn">确认并处理</button>
+			</footer>
+		</div>
+		<div id="conformDiv" style="display: none;height: 100%;">
+			<header>
+				<div class="detailHead">
+					<span onclick="conformBackMain();" class="returnTxt">取消</span>
+					<p class="textCenter">报警处理</p>
+				</div>
+				<div class="alarmTop">
+					<dl>
+						<dt id="imgUrl" class="alarmTu"><i class="centerImg"></i><img src="../img/alarm1.png" alt="一级报警"></dt>
+						<dd id="alarmGradeMess"></dd>
+					</dl>
+				</div>
+			</header><!--header end-->
+			<!--报警详情start-->
+			<section class="wrapColor mescroll head9Section">
+				<div class="alarmMessBox dealBox borderB">
+					<form action="" method="post">
+						<div class="textareaBox boorderB">
+							<span>处理办法</span>
+							<textarea id="alarmOpreateMess" class="troubMess" cols="8" placeholder="请填写文字"></textarea>
+						</div>
+						<ul>
+							<li>
+								<span>备注信息</span>
+								<input id="remarkMesageMess" type="text" placeholder="请填写文字"/>
+							</li>
+							<li class="noborder">
+								<span>责任单位</span>
+								<input id="orderCompanyMess" type="text" placeholder="请填写文字"/>
+							</li>
+						</ul>	
+					</form>
+				</div>
+			</section><!--报警详情end-->
+			<footer>
+				<button type="button" onclick="onSubmit();" class="dealBtn">提交</button>
+			</footer>
+		</div>
+		
+	</body>
+	<script src="../js/config.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/common/utils.js"></script>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../../lib/mescroll/mescroll.js"></script>
+	<script src="../js/alarm/alarmMess.js"></script>
+	<script src="../../dist/js/frozen.js"></script>
+
+</html>

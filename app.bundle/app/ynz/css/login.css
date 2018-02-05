@@ -1,0 +1,69 @@
+body{
+	position: relative;
+}
+header{
+	background: none;
+}
+.login_wrap{
+	width: 100%;
+	height: 100%;
+	background: url(backImg/loginBg.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.login_main{
+	padding: 0.9rem 0.75rem 0;	
+}
+.login_logo,
+.login_logo img{
+	width: 2.41rem;
+	height: 0.96rem;
+}
+.company{
+	font-weight: 900;
+	color: #333;
+	font-size: 0.6rem;
+	text-align: center;
+	margin: 1.09rem 0 1.57rem;
+}
+.loginMess li{
+    height: 1.3rem;
+    line-height: 1.3rem;
+	border-bottom:1px solid #C4C3C1;
+	font-size: 0.35rem;
+}
+.loginMess li:last-child{
+	border: 0;
+}
+.loginMess span{
+	color: #263238;
+	font-weight: 900;
+
+}
+.loginMess .messInput{
+	color: #999;
+	width:75%;
+	height: 100%;
+	float: right;
+	background: none;
+	
+}
+.remberPass input{
+	margin-right: 0.34rem;
+    	margin-top: -5px;
+}
+.redBtnCircle{
+	margin-top: 0.8rem;
+}
+.server{
+	width: 100%;
+	margin-top: 1rem;
+	bottom: 0.4rem;
+	color: #666;
+	display: table;
+    text-align: center;
+}
+.server img{
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-top: -3px;
+}

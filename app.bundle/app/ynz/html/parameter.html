@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>电站概览-基本参数 </title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/parameter.css"/>
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+	</head>
+	<body>
+		<!--header start-->
+		<header>
+			<div class="detailHead">
+				<a href="plantList.html"><span class="returnTxt" style="color: #fff;">电站列表</span></a>
+				<p class="textCenter"><span class="plantName" id="name"></span></p>
+			</div>
+			<div class="powerBox">
+				<div class="data">
+					<span id="generatedActivePower"></span> kW
+				</div>
+				<div class="nowPower">
+					实时功率
+				</div>
+			</div>
+		</header><!--header end-->
+		<!--中心start-->
+		<section class="wrapColor">
+			<!--基本参数start-->
+			<div class="basicPara">
+				<p class="weathTitle"><i class="weathImg"></i>基本参数</p>
+				<div class="paraBottom">
+					<div class="borderB over_flow">
+						<dl class="paraList">
+							<dt class="paraImg"><img src="../img/pic1.png" alt="日发电量"/></dt>
+							<dd class="paraData"><span id="generationDaily"></span> <eq id="str1daliy"></eq></dd>
+							<dd>日发电量</dd>
+						</dl>
+						<dl class="paraList">
+							<dt class="paraImg"><img src="../img/pic2.png" alt="累计发电量"/></dt>
+							<dd class="paraData"><span id="generationGross"></span> <eq id="str2daliy"></eq></dd>
+							<dd>累计发电量</dd>
+						</dl>
+						<dl class="paraList noborder">
+							<dt class="paraImg"><img src="../img/pic3.png" alt="装机容量 "/></dt>
+							<dd class="paraData"><span id="installCapacity"></span> kWh</dd>
+							<dd>装机容量</dd>
+						</dl>
+					</div>
+					<div class="borderB over_flow">
+						<dl class="paraList">
+							<dt class="paraImg"><img src="../img/pic4.png" alt="斜面辐射度"/></dt>
+							<dd class="paraData"><span id="inclinedIrradiance"></span> W/m²</dd>
+							<dd>斜面辐射度</dd>
+						</dl>
+						<dl class="paraList">
+							<dt class="paraImg"><img src="../img/pic5.png" alt="水平辐射度"/></dt>
+							<dd class="paraData"><span id="irradiance"></span> W/m²</dd>
+							<dd>水平辐射度</dd>
+						</dl>
+						<dl class="paraList noborder">
+							<dt class="paraImg"><img src="../img/pic6.png" alt="电站PR值"/></dt>
+							<dd class="paraData"><span id="pr"></span> %</dd>
+							<dd>电站PR值</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!--基本参数end-->
+			<!--数据图start-->
+			<div class="basicPara dataImgs">
+				<div class="weathTitle"><i class="weathImg"></i>数据图
+					<div class="btngroup dataBtns">
+						<a class="activAbtn" href="###">日发电量</a>
+						<a href="###">功率</a>
+					</div>
+				</div>
+				<div class="dataBottom">
+					<div class="echartBox" id="generatDay" ></div>
+					<div class="echartBox" id="power" style="display: none;"></div>
+				</div>
+				
+			</div>
+			<!--数据图end-->
+		</section><!--中心end-->
+		<footer>
+			<dl class="menu">
+				<a href="###">
+					<dt class="menuTu menu1"><img src="../img/footSelect1.png" alt="电站概览"></dt>
+					<dd class="activeMenu">电站概览</dd>
+				</a>
+			</dl>
+			<dl class="menu">
+				<a href="equipView.html">
+					<dt class="menuTu menu1"><img src="../img/footImg2.png" alt="设备监控"></dt>
+					<dd>设备监控</dd>
+				</a>
+			</dl>
+			<dl class="menu">
+				<a href="alarmMess.html">
+					<dt class="menuTu menu1"><img src="../img/footImg3.png" alt="报警信息"></dt>
+					<dd>报警信息</dd>
+				</a>
+			</dl>
+			<dl class="menu">
+				<a href="userMess.html">
+					<dt class="menuTu menu1"><img src="../img/footImg4.png" alt="个人中心"></dt>
+					<dd>个人中心</dd>
+				</a>
+			</dl>
+		</footer>
+	</body>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../js/cache.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/plugins/echarts.min.js"></script>
+	<script src="../js/echart_ynz.js"></script>
+	<script src="../js/common/utils.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/powerStation/parameter.js"></script>	
+</html>

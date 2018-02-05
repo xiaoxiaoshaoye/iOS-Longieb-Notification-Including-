@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>电站列表页面</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--frozen start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--frozen end-->
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/plantList.css"/>
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+		<style>
+			header {
+			    position: absolute;
+			    overflow: hidden;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="seachCon" style="display: none;height: 100%;">
+			<header class="headerCls">
+				<p class="absolLeft returnButton" onclick="reloadthispage();"><i class="ui-icon-return"></i></p>
+				<div class="searchBar">
+					<!--<form method="post">	-->		
+						
+						<i class="ui-icon-search"></i>
+						<input type="text" class="searchTxt" name="" id="powerCondition" value="" placeholder="输入设备编号"/>
+						<a onclick="clearInp();" class="ui-icon-close"></a>
+					<!--</form>-->
+				</div>
+				<span class="cancleTxt"><a onclick="seacherBtn();">搜索</a></span>
+			</header>
+			<section>
+				<div class="searchCont">
+					<div class="searchBox">
+						<span class="searchTitle">在这里可以搜索</span>
+						<p class="borderTop"></p>	
+						<ul class="historyBox" id="historyBox">
+						</ul>
+					</div>
+				</div>			
+			</section>
+		</div>
+		<div class="main" id="mainCon" style="display: block;height: 100%;">
+			<!--header start-->
+			<header>
+				<ul class="headerFlex">
+					<li>
+						<h1 class="logo"><a href="###"><img src="../img/logo.png" alt="logo" title="logo"></a></h1>
+					</li>
+					<li class="title">电站列表</li>
+					<li>
+						<div class="setting">
+							<a id="settingBtn" href="###"><i class="ui-icon-set"></i></a>
+							
+						</div>
+					</li>
+				</ul>	
+				<div class="exitBox" id="exitBox" style="display: none;">
+								
+				</div>
+			</header><!--header end-->
+			<section>
+				<div class="search" style="text-align:left;" onclick="seachDiv();">
+					<!--<form method="post">	-->					
+						<i class="ui-icon-search"></i>
+						<span id="seachName">搜索</span>
+					<!--</form>-->
+				</div>
+				<div id="powerStationList" class="plantCon wrapColor">
+					<!--plantList start-->
+				</div>
+			</section>
+				
+		</div>
+	</body>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/cache.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/powerStation/planList.js"></script>
+	<script src="../js/common/dropOut.js"></script>
+</html>

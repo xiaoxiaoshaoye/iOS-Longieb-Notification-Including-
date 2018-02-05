@@ -1,0 +1,42 @@
+
+section{
+	background: #fff;
+	position: relative;
+}
+.nothing{
+	height: 0.4rem;
+	background:#f0eff5;
+}
+.serverCon{
+	background: #fff;
+	overflow: hidden;
+}
+.serverConList{
+	padding: 0 0.3rem;
+	margin-top: 0.34rem;
+	overflow: hidden;
+}
+.serverMess{
+	width: 83%;
+	height: 100%;
+	float: left;
+	margin-left: 0.28rem;
+	border-bottom: 1px solid #bdbdbd;	
+}
+.ip{
+	color: #8c8c8c;
+	margin: 0.02rem 0;
+}
+.confirmBox{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 0.5rem;
+}
+.btnconfirm{
+	width: 90%;
+	text-align: center;
+	color: #fff;
+	height: 0.88rem;
+	line-height: 0.88rem;
+}

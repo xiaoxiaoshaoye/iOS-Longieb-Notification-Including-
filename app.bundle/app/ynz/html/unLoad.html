@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>加载失败页面</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--frozen start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--frozen end-->
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+		<style>
+			section{
+				position: absolute;
+			    top: 0.9rem;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			}
+			.centerTitle{
+				text-align: center;
+				line-height: 0.88rem;
+				color: #fff;
+			}
+			section{
+				background: #fff;
+				color: #9e9999;
+			}
+			.unloadImg{
+				display: inline-block;
+				width: 1.94rem;
+				height: 2.38rem;
+				margin: 2.77rem 0 0.48rem;
+				background: url(../css/backImg/unload.png) no-repeat center;
+				background-size: 100% 100%;
+			}
+			.btn-circle-gray{
+				font-size: 0.33rem;
+				padding:0.22rem 0.74rem;
+				border: 1px solid #d5d5d5;
+				color:  #9e9999;
+				border-radius: 25px;
+				-webkit-border-radius: 25px;
+				-moz-border-radius: 25px;
+			}
+			.butGroup{
+				text-align: center;
+				margin-top: 1rem;	
+			}	
+		</style>
+	</head>
+	<body>
+		<header>
+			<p class="centerTitle" id="bbb">加载失败</p>
+		</header>
+		<section>
+			<ul class="textCenter">
+				<li class="unloadImg"></li>
+				<li>数据加载失败</li>
+				<li>网络或服务器延迟，请稍后再试</li>
+			</ul>
+			<div class="butGroup">
+				<a type="button" class="btn-circle-gray" href="javascript:history.go(-1)">重新加载</a>
+				<button type="button" class="btn-circle-gray" onclick="window.android.toSetting();">检查网络</button>
+			</div>
+		</section>
+	</body>
+</html>

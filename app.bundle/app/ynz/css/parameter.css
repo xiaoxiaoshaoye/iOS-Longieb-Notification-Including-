@@ -1,0 +1,101 @@
+header{
+	height: 2.78rem;
+}
+section{
+	position: absolute;
+	bottom:0.98rem;
+	top: 2.78rem;
+	left: 0;
+	right: 0;
+}
+footer{
+	background: #fff;
+	position:absolute;
+	bottom:0;
+	left:0;
+	height: 0.96rem;
+}
+.detailHead .plantName{
+	display: inline-block;
+	width: 2.5rem;
+	white-space: pre;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.data{
+	font-size: 0.28rem;
+	text-align: center;
+	height: 1.08rem;
+}
+.data span{
+	font-size: 0.66rem;	
+}
+.powerBox{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 1.91rem;
+	background: url(backImg/powerbg.png) repeat-x left center;
+}
+.nowPower{
+	font-size: 0.28rem;
+	text-align: center;
+	height: 0.83rem;
+	line-height: 0.83rem;	
+}
+.basicPara{
+	background: #fff;
+	height: 6.32rem;
+	margin: 0.2rem 0;
+}
+.paraList{
+	text-align: center;
+	float:left;
+	width: 33%;
+	height: 2.75rem;
+	font-size: 0.26rem;
+	border-right: 1px solid #bdbdbd;
+}
+.paraImg{
+    margin: 0.4rem 0 0.3rem;
+}
+.paraImg img{
+	width: 0.7rem;
+	height: auto;
+}
+.paraData{
+	color: #333;
+	font-size: 0.2rem;
+} 
+.paraData span{
+	font-size: 0.4rem;
+	color: #333;
+} 
+.btngroup{
+	float: right;
+}
+.dataImgs{
+	height: 7rem;
+}
+.btngroup a{
+	float: left;
+    margin-right: 0.3rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin-top: 0.1rem;
+    padding: 0 0.2rem;
+    font-size: 0.26rem;
+	background: #e9f1f6;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+.btngroup .activAbtn{
+	color: #eb3341;
+	border:1px solid #eb3341;
+	background: none;
+}
+.echartBox{
+	height: 6.2rem;
+}
+

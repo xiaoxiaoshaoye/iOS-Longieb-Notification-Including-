@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>		
+		<title>登录页面</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+	</head>
+	<body ontouchstart="">
+		<div class="login_wrap">
+			<div class="login_main">
+				<h1 class="login_logo"><a href="###"><img src="../img/login_logo.png" alt="logo" /></a></h1>
+				<h1 class="company">实证电站监控平台</h1>
+				<form action="">
+					<ul class="loginMess">
+						<li><span>用户名</span><input id="username" class="messInput" type="text" value="" placeholder="请输入用户名"></li>
+						<li><span>密 &nbsp;&nbsp;码</span><input id="password" class="messInput" type="password" value="" placeholder="请输入密码"></li>
+						<li class="checkBox noborder">
+	                		<label>  
+						        <input type="checkbox" class="checks" name="" id="check1"/>  
+						        <label id="rulelabel" class="bgchecks" for="check1"></label> 
+						                         记住密码
+	   						</label>
+	                		<div class="floatR"><a onclick="forgetMSG();" class="textReight">忘记密码</a></div>
+						</li>
+						<p id="tip" style="color: red;display: none;">用户名或密码错误</p>
+					</ul>
+					<button type="button" onclick="onSubmit();" class="redBtnCircle">登录</button>
+					<div class="server">
+						<a href="serverConfigure.html"><p>服务器配置&nbsp;&nbsp;<img src="../img/goto.png" alt="服务器配置" /></p></a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="ui-dialog show" id="processpanel" style="display: none;">
+			<div class="ui-dialog-cnt" style="width: 208px;">
+				<div class="ui-dialog-bd">
+					<div style="text-align: center;">
+						<div>下载进度：<span id="processnum">0</span>%</div>
+					</div>
+				</div>
+				<div class="ui-dialog-ft ui-btn-group">
+					<button type="button" data-role="button" class="select" onclick="hideSure();" id="dialogButton0">取消</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../../dist/js/frozen.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../js/login/login.js"></script>
+	
+</html>

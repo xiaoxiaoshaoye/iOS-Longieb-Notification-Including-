@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>报警信息--未处理</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/notice.css"/>
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+	</head>
+	<body>
+		<!--header start-->
+		<header>
+			<ul class="headerBox">
+				<li class="absolLeft"><i class="ui-icon-return"></i></li>
+				<li class="textCenter">报警详情</li>
+			</ul>	
+		</header><!--header end-->
+		<!--报警详情start-->
+		<section class="noFoot wrapColor">
+			<div class="alarmTop">
+				<dl>
+					<dt class="alarmTu"><i class="centerImg"></i><img src="../img/deal.png" alt="已处理"></dt>
+					<dd>一级报警</br><span>完成</span></dd>
+				</dl>
+			</div>
+			<form action="">
+				<div class="alarmMessBox borderB">
+					<ul>
+						<li>
+							<span>电站名称</span>
+							<input type="text" />
+						</li>
+						<li>
+							<span>发生时间</span>
+							<input type="text" />
+						</li>
+						<li>
+							<span>故障等级</span>
+							<input type="text" />
+						</li>
+						<li>
+							<span>设备名称</span>
+							<input type="text" />
+						</li>
+						<li>
+							<span>设备编号</span>
+							<input type="text" />
+						</li>
+						<li>
+							<span>测点类型</span>
+							<input type="text" />
+						</li>
+					</ul>
+					<div class="textareaBox noborder">
+						<span>故障信息</span>
+						<textarea class="troubMess" cols="8"></textarea>
+					</div>
+				</div>
+				<div class="alarmMessBox borderB"  style="margin-top:0.2rem;">
+					<div class="textareaBox borderB">
+						<span>处理办法</span>
+						<textarea class="troubMess" cols="8"></textarea>
+					</div>
+					<ul>
+						<li>
+							<span>处理人</span>
+							<input type="text" />
+						</li>
+						<li>
+							<span>备注信息</span>
+							<input type="text" />
+						</li>
+						<li class="noborder">
+							<span>责任单位</span>
+							<input type="text" />
+						</li>
+					</ul>
+				</div>
+			</form>
+		</section><!--报警详情end-->
+	</body>
+	<script src="../js/static/zepto.js"></script>
+</html>

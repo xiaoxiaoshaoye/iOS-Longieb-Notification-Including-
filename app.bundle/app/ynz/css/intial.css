@@ -1,0 +1,93 @@
+
+.mbsc-android-holo-light .mbsc-fr-hdr{
+	color: #e3264e;
+	border-color: #e3264e;
+}
+.mbsc-android-holo-light .mbsc-sc-whl-l{
+	border-color: #e3264e;
+}
+
+.displaynone{
+	display: none;
+}
+.aui-radio:checked, .aui-radio.aui-checked, .aui-checkbox:checked, .aui-checkbox.aui-checked{
+	background: #ffffff;
+	border: 1px solid #fd1142;
+}
+
+.aui-radio:checked:before, .aui-radio.aui-checked:before, .aui-checkbox:checked:before, .aui-checkbox.aui-checked:before, .aui-radio:checked:after, .aui-radio.aui-checked:after, .aui-checkbox:checked:after, .aui-checkbox.aui-checked:after{
+	border: 1px solid #fd1142;
+	border-top: none;
+  border-right: none;
+}
+/*截图上传页面*/
+.clipbg{
+	position: fixed;
+	/*background: black;*/
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+.clipbgColor{
+	background: #000;
+}
+.loading{
+	position: absolute;
+	top: 40%;
+	width: 38%;
+	left: 31%;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	z-index: 99999;
+	text-align: center;
+	color: #ffffff;
+	/*border-radius:0.2rem ;*/
+	background: #9f9f9f;
+}
+.clipbg #clipArea{
+	width: 100%;
+	height: 80%;
+	margin: auto;
+
+}
+.clipbg .footer{
+    width: 100%;
+    position: fixed;
+    /*left: 4%;*/
+    bottom:0;
+    text-align: center;
+    z-index: 999999;
+}
+.clipbg dl{
+	background: #ffffff;
+	overflow: hidden;
+	/*margin-bottom: 0.14rem;
+	 * border-radius: 0.2rem;*/
+}
+.clipbg dd{
+	position: relative;
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom:1px solid #999999 ;
+}
+.clipbg .back{
+	height: 1rem;
+	line-height:1rem;
+	/*border-radius: 0.2rem;
+	margin-bottom: 0.14rem;*/
+	background: #ffffff;
+}
+.clipbg dd input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	filter:alpha(opacity=0);  
+  -moz-opacity:0;  
+  -khtml-opacity: 0;  
+  opacity: 0; 
+}

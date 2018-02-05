@@ -1,0 +1,36 @@
+section{
+	overflow-y:auto;
+	background: #f5f5f5;
+}
+.title {
+	width: 60%;
+    text-align: left;
+}
+.equipList{
+	margin-top: 0.3rem;
+	height: 1.8rem;
+	background: #fff;
+	font-size: 0.32rem;
+	padding: 0.15rem 0.3rem;
+}
+.equipImg{
+	border: 1px solid #F7F7F9;
+    margin-right: 1.34rem;
+    margin-top: 0.12rem;
+}
+.equipImg,
+.equipImg img{
+	float: left;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+}
+.equipName{
+	font-weight: 900;
+	color: #333;
+	margin: 0.3rem 0 0.23rem;
+}
+
+

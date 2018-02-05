@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+		<meta name="wap-font-scale" content="no">
+		<meta name="apple-mobile-web-app-title" content=""/>
+		<meta name="apple-touch-fullscreen" content="YES"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="format-detection" content="telephone=no,email=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta http-equiv="x-rim-auto-match" content="none"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>		
+		<meta name="description" content="" /> 
+    	<meta name="keywords" content=""/>
+		<title>设备监控列表页面</title>
+		<link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
+		<!--common style start-->
+		<!--图标start-->
+		<link rel="stylesheet" type="text/css" href="../../demo/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/frozen.css"/>
+		<!--图标end-->
+		<link rel="stylesheet" type="text/css" href="../css/static/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/static/common.css"/>
+		<!--common style end-->
+		<link rel="stylesheet" type="text/css" href="../css/equipView.css"/>
+		<!--common js start-->
+		<script src="../js/static/rem.js"></script>
+		<!--common js end-->
+	</head>
+	<body>
+		<div class="main">
+			<!--header start-->
+			<header>
+				<div class="detailHead">
+					<a href="plantList.html" style="color: #fff"><span class="returnTxt">电站列表</span></a>
+					<p class="textCenter">设备监控</p>
+				</div>
+			</header><!--header end-->
+			<section>
+				<div class="wrapColor">
+					<ul>
+						<a href="inverterDetail.html">
+							<li class="equipList">
+								<div class="equipImg">
+									<img src="../css/backImg/nbq.png" alt="设备图-逆变器"/>
+								</div>
+								<div class="floatL">
+									<p class="equipName">逆变器</p>
+									<p>合计：<b class="redColor" id="inverter"></b></p>
+								</div>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+						<a href="messboxList.html">
+							<li class="equipList">
+								<div class="equipImg">
+									<img src="../css/backImg/clx.png" alt="设备图-测量箱"/>
+								</div>
+								<div class="floatL">
+									<p class="equipName">测量箱</p>
+									<p>合计：<b class="redColor" id="grideBox"></b></p>
+								</div>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+						<a href="axie.html">
+							<li class="equipList">
+								<div class="equipImg">
+									<img src="../css/backImg/axis.png" alt="设备图-单双轴"/>
+								</div>
+								<div class="floatL">
+									<p class="equipName">单双轴</p>
+									<p>合计：<b class="redColor" id="contrl"></b></p>
+								</div>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+						<a href="iv.html">
+							<li class="equipList">
+								<div class="equipImg">
+									<img src="../css/backImg/iv.png" alt="设备图-IV 多通道设备"/>
+								</div>
+								<div class="floatL">
+									<p class="equipName">IV 多通道设备</p>
+									<p>合计：<b class="redColor" id="ivequip"></b></p>
+								</div>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+						<a href="weather.html">
+							<li class="equipList">
+								<div class="equipImg">
+									<img src="../img/weather.png" alt="设备图-气象站"/>
+								</div>
+								<div class="floatL">
+									<p class="equipName">气象站</p>
+									<p>合计：<b class="redColor" id="weatherStation"></b></p>
+								</div>
+								<div class="next floatR">
+									<i class="ui-icon-next"></i>
+								</div>
+							</li>
+						</a>
+					</ul>
+				</div>
+			</section>
+			<footer>
+				<dl class="menu">
+					<a href="parameter.html">
+						<dt class="menuTu menu1"><img src="../img/footImg1.png" alt="电站概览"></dt>
+						<dd>电站概览</dd>
+					</a>
+				</dl>
+				<dl class="menu">
+					<a href="###">
+						<dt class="menuTu menu1"><img src="../img/footSelect2.png" alt="设备监控"></dt>
+						<dd class="activeMenu">设备监控</dd>
+					</a>
+				</dl>
+				<dl class="menu">
+					<a href="alarmMess.html">
+						<dt class="menuTu menu1"><img src="../img/footImg3.png" alt="报警信息"></dt>
+						<dd>报警信息</dd>
+					</a>
+				</dl>
+				<dl class="menu">
+					<a href="userMess.html">
+						<dt class="menuTu menu1"><img src="../img/footImg4.png" alt="个人中心"></dt>
+						<dd>个人中心</dd>
+					</a>
+				</dl>
+			</footer>
+		</div>
+	</body>
+	<script src="../js/config.js"></script>
+	<script src="../js/common/tools.js"></script>
+	<script src="../js/static/zepto.js"></script>
+	<script src="../js/powerStation/equipView.js"></script>
+	<script src="http://test.yunengzhe.com:846/cdn/global/plugins/jquery.min.js" type="text/javascript"></script>
+</html>
